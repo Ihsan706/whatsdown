@@ -1,7 +1,7 @@
 <h1 id="output">connection failed</h1>
 <script>
   const got = new URLSearchParams(window.location.search);
-  const name = got.get("name"); // "Ihsan"
+  const name = got.get("q"); // "Ihsan"
   var output = getitemById('output');
-  output.innerHTML = "sccsasful" ;
+  output.innerHTML = "sccsasful name is" + name ;
 </script>
