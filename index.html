@@ -1,8 +1,13 @@
-
 <script>
   const got = new URLSearchParams(window.location.search);
   const name = got.get("q"); // "Ihsan"
   var output =  document.getElementById('output');
   output.innerHTML = "sccsasful name is " + name ;
+
+
+  // In your GitHub page script
+const params = new URLSearchParams(window.location.search);
+const name = params.get("q");
+document.getElementById('output').textContent = `Successful name is ${name}`;
 </script>
 <h1 id="output">connection failed</h1>
