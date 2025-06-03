@@ -1,13 +1,165 @@
-<script>
-  const got = new URLSearchParams(window.location.search);
-  const name = got.get("q"); // "Ihsan"
-  var output =  document.getElementById('output');
-  output.innerHTML = "sccsasful name is " + name ;
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<link rel="stylesheet" href="to-X.css" id="csstype"/>
+<link rel="stylesheet" href="main.css"/>
+<style>
+:root{
+	--max_width:1200px;
+</style>
+    <title>whatsdown</title>
+	<script src="script.js"></script>
+</head>
+<body>
+    <div class="container" id="chat">
+        <div class="chat-window">
+            <div class="chat-header">
+			<button class="chose" type="button" onclick="chose_a_group();">
+			<div class="menu">
+  <svg viewBox="0 0 100 100">
+    <path class="line top" d="M 20,30 H 80"/>
+    <path class="line middle" d="M 20,50 H 80" />
+    <path class="line bottom" d="M 20,70 H 80"/>
+  </svg>
+</div>
+			</button>
+                <div class="avatar"></div>
+                <div class="chat-info">
+                    <div class="chat-name" id="chat_name">wait</div>
+                    <div class="last-message" id="name">name: wait</div>
+                </div>
+            </div>
+			<div class="chat-messages" id="chat-messages2">
+			<button class="otbutton-active" id="otbutton" onclick="otbuttonfun();">
+			<svg viewBox="0 0 100 100">
+			<path class="line top" d="M50,80 L35,65" id="arrow_1"/>
+			<path class="line middle" d="M50,20 L50,65" id="arrow_2" />
+			<path class="line bottom" d="M50,80 L65,5" id="arrow_3" /><!-- M50,80 L65,65 -->
+            </svg>
+			</button>
+	        <div id="chat-messages">
+<!-- here was the text -->
+                <div class="message <>">
+                    <div class="message-bubble">
+					<!-- here was the msg -->
+                        <div class="timestamp">
+<!-- name | time -->
+                        </div>
+                    </div>
+                </div>
+			</div>
+			</div>
+			<div class="message-input" id="input-div">
+			<div class="send-msg_div">
+			<div id="send-msg_div">
+					<button class="submit-msg" type="button" name="send-msg" onclick="send_msg()">Send</button>
+					<button class="more" type="button" name="send-msg" onclick="more_less();" id="more">More</button>
+					<input class="input" type="text" name="message" placeholder="Type a message" id="send-msg">
+					<audio id="recorder" class="hidden" muted></audio>
+			</div>
+					
+					<button class="img" type="button" onclick="send_an_img();" id="add_img">add a file</button>
+					<label class="img" id="select-file">
+					<h1 id="select-file_text">select a file</h1>
+					<input style="display: none;" type="file" name="send-msg"  id="selected-files">
+					</label>
+					<button class="morechose" type="button" onclick="bigtext();" id="h1">make text big</button>
+					<button class="morechose" type="button" onclick="send_mail_fun();" id="mail">send an E-mail</button><!-- send_email -->
+					<button class="morechose" type="button" onclick="smailtext();" id="smailtext">make text small</button>
+					<button class="morechose" type="button" onclick="links_func();" id="addlink">share a link</button>
+					</div>
+            </div>
+        </div>
+    </div>
+<div id="chose-a-chat" class="chose-open">
+	<div class="chose-header">
+		<button class="chose" type="button" onclick="chose_a_group();">
+			<div class="menu">
+                <svg viewBox="0 0 100 100">
+                    <path class="line top" d="M 20,30 H 80"/>
+                    <path class="line middle" d="M 20,50 H 80" />
+                    <path class="line bottom" d="M 20,70 H 80"/>
+                </svg>
+            </div>
+	    </button>
+			<div class="chat-info">
+                    <div class="chat-name" id="chat_name2">wait</div>
+                    <div class="last-message" id="name2">WAIT</div>
+                </div>
+	</div>
+	<div class="chose-who-talk-to" id="talk_to">
 
+	</div>
+</div>
+<div id="sign-in" class="chose-open">
+</div>
+	<script>
+	//i left this code alone
+	//no one well undersand what is happening any way
+	function chose_a_group(what_to_do){
+	//what to do , i don't fucking know
+		container = document.getElementById("chat");
+	    chose = document.getElementById("chose-a-chat");
+		var stylesheet = document.getElementById("csstype");
+		sign_in = document.getElementById("sign-in");
+		console.log(what_to_do);
+		if(what_to_do != "sign-in"){
+		if(container.classList == "container"){
+		container.classList.remove("container");
+		container.classList.add("chose-open");
 
-  // In your GitHub page script
-const params = new URLSearchParams(window.location.search);
-const name = params.get("q");
-document.getElementById('output').textContent = `Successful name is ${name}`;
+		chose.classList.remove("chose-open");
+		chose.classList.add("chose-container");
+		
+		stylesheet.href = "from-X.css";
+		
+		sign_in.classList.remove("container");
+		sign_in.classList.add("chose-open");
+		}else{
+		container.classList.remove("chose-open");
+		container.classList.add("container");
+		
+		chose.classList.remove("chose-container");
+		chose.classList.add("chose-open");
+		
+		stylesheet.href = "to-X.css";
+		
+		sign_in.classList.remove("container");
+		sign_in.classList.add("chose-open");
+		}
+		}else{
+	    container.classList.remove("container");
+		container.classList.add("chose-open");
+		
+		chose.classList.remove("chose-container");
+		chose.classList.add("chose-open");
+		
+		sign_in.classList.remove("chose-open");
+		sign_in.classList.add("container");
+		}
+		
+	}
 </script>
-<h1 id="output">connection failed</h1>
+<script>
+/*
+this is an old demo that broke the entire script
+
+fetch('server.php', {
+    method: 'POST',
+    headers: {
+        'Content-Type': 'application/x-www-form-urlencoded'
+    },
+    body: new URLSearchParams({
+		action: true,
+        name: name,
+		name: password,
+        age: 1
+    })
+})
+.then(response => response.text()) // or response.json() if JSON output
+.then(data => console.log(data))
+.catch(error => console.error('Error:', error));
+*/
+</script>
+</body>
+</html>
