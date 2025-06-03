@@ -49,7 +49,7 @@
 	
 	if(name == "no-name" || password == "no-pas"){
 	make_an_acount = true;
-    fetch('http://ihsan.ddns.net/whatsdown/tests/lab2/server.php', {
+    fetch('https://ihsan.ddns.net/whatsdown/tests/lab2/server.php', {
     method: 'POST',
     headers: {
         'Content-Type': 'application/x-www-form-urlencoded'
@@ -128,7 +128,7 @@ setInterval(() => {
 if(make_an_acount == false){
 sendmsg = document.getElementById("send-msg").value;
 //if(sendmsg != ''){
-fetch('http://ihsan.ddns.net/whatsdown/tests/lab2/server.php', {
+fetch('https://ihsan.ddns.net/whatsdown/tests/lab2/server.php', {
     method: 'POST',
     headers: {
         'Content-Type': 'application/x-www-form-urlencoded'
