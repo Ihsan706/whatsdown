@@ -75,7 +75,7 @@
 
 setInterval(() => {
 if(make_an_acount == false){
-fetch('http://ihsan.ddns.net/whatsdown/tests/lab2/server.php', {
+fetch('https://ihsan.ddns.net/whatsdown/tests/lab2/server.php', {
     method: 'POST',
     headers: {
         'Content-Type': 'application/x-www-form-urlencoded'
@@ -163,7 +163,7 @@ function send_msg(){
 	url = document.getElementById("link_url").value;
 	}
 //if(sendmsg != ''){
-fetch('http://ihsan.ddns.net/whatsdown/tests/lab2/server.php', {
+fetch('https://ihsan.ddns.net/whatsdown/tests/lab2/server.php', {
     method: 'POST',
     headers: {
         'Content-Type': 'application/x-www-form-urlencoded'
@@ -224,7 +224,7 @@ document.getElementById("chat_name2").innerHTML = setgroup_name;
 
 //sendmsg = document.getElementById("test").value;
 //if(sendmsg != ''){
-fetch('http://ihsan.ddns.net/whatsdown/tests/lab2/server.php', {
+fetch('https://ihsan.ddns.net/whatsdown/tests/lab2/server.php', {
     method: 'POST',
     headers: {
         'Content-Type': 'application/x-www-form-urlencoded'
@@ -271,7 +271,7 @@ function make_an_ac(){
 	passwordd = document.getElementById("password").value;
 	///////only remove on debuging console.log(namee);
 	///////only remove on debuging console.log(passwordd);
-	fetch('http://ihsan.ddns.net/whatsdown/tests/lab2/server.php', {
+	fetch('https://ihsan.ddns.net/whatsdown/tests/lab2/server.php', {
     method: 'POST',
     headers: {
         'Content-Type': 'application/x-www-form-urlencoded'
@@ -394,7 +394,7 @@ if (a_file_has_been_selected === true){
     // Append extra fields as needed
     formData.append("upload", "true"); // sending as string "true"
 	
-	fetch('http://ihsan.ddns.net/whatsdown/tests/lab2/server.php', {
+	fetch('https://ihsan.ddns.net/whatsdown/tests/lab2/server.php', {
     method: 'POST',
     headers: {
         'Content-Type': 'application/x-www-form-urlencoded'
@@ -429,7 +429,7 @@ function send_an_img() {
       ///////only remove on debuging console.log(pair[0], pair[1]);
     }
 
-    fetch('http://ihsan.ddns.net/whatsdown/tests/lab2/server.php', {
+    fetch('https://ihsan.ddns.net/whatsdown/tests/lab2/server.php', {
       method: 'POST',
       body: formData
     })
