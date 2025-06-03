@@ -1,0 +1,39 @@
+.menu {
+  cursor: pointer;
+}
+
+.line {
+  stroke-width: 6;
+  stroke-linecap: round;
+  stroke: #8deaff;
+  transition: all 500ms;
+}
+
+.top {
+  transform-origin: 26px 40px;
+}
+
+.middle {
+  stroke-dasharray: 60 60;
+}
+
+.bottom {
+  transform-origin: 26px 60px;
+}
+
+.menu:hover .line {
+  stroke: #ff7c7c;
+}
+
+.menu:hover .top {
+  transform: rotate(45deg);
+}
+
+.menu:hover .middle {
+  stroke-dasharray: 1 60;
+  stroke-dashoffset: -30;
+}
+
+.menu:hover .bottom {
+  transform: rotate(-45deg);
+}
